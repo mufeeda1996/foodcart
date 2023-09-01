@@ -11,7 +11,7 @@ import { Phone } from '@mui/icons-material';
 
 function Footer() {
     const Title=styled(Typography)(({theme})=>({
-        marginLeft:"480px",
+        marginLeft:"530px",
         fontSize:"24px",
         fontWeight:"bold",
          padding:"10px",

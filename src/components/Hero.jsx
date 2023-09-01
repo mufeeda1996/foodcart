@@ -3,9 +3,9 @@ import { Box, Typography } from '@mui/material'
 import {styled} from '@mui/system'
 import logo from '../../src/Img/welcomelogo.jpg'
 import CustomButton from './CustomButton'
-import {heroData} from '../../src/Utils/data'
+import {heroData} from '../Utils/data'
 
-function WelcomeHome() {
+function Hero() {
 
     const WelcomeLogo=styled(Box)(({theme})=>({
         backgroundImage: `url(${logo})`,
@@ -18,9 +18,10 @@ function WelcomeHome() {
 
     const Container=styled(Box)(({theme})=>({
         display:'flex',justifyContent:"space-between",
-        [theme.breakpoints.down("md")]:{
+        [theme.breakpoints.down("sm")]:{
             flexDirection:"column"
-        }
+        },
+        
     }))
     const WelcomeTitle=styled(Typography)(({theme})=>({
         fontSize:"4rem",
@@ -56,11 +57,17 @@ function WelcomeHome() {
         padding:"30px",
         boxShadow: 'rgba(0, 0, 0, 0.5) 0px 5px 15px',
         [theme.breakpoints.down("md")]:{
-            width:"330px",
-            marginTop:"10px"
-            
-
-        }
+            width:"450px",
+            marginTop:"70px",
+            padding:"30px",
+            height:"400px"
+        },
+        [theme.breakpoints.down("sm")]:{
+            width:"280px",
+            marginTop:"10px",
+            height:"440px",
+            marginLeft:"10px"
+        },
        }))
 
      const Cards=styled(Box)(({theme})=>({
@@ -70,11 +77,19 @@ function WelcomeHome() {
          boxShadow: 'rgba(0, 0, 0, 0.5) 0px 5px 15px',
          marginTop:"-50px",
          marginLeft:"-20px",
-         borderRadius:"20PX",
-         [theme.breakpoints.down("md")]:{
+         borderRadius:"20px",
+         [theme.breakpoints.down("sm")]:{
             marginLeft:"-10px",
-            
-         }
+            // width:"100px"
+         },
+         [theme.breakpoints.down("md")]:{
+            width:"135px",
+            height:"150px",
+            marginTop:"-50px",
+            marginLeft:"-10px",
+         },
+        
+        
      }))
 
   return (
@@ -121,4 +136,4 @@ function WelcomeHome() {
   )
 }
 
-export default WelcomeHome
+export default Hero

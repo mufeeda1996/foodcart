@@ -2,7 +2,7 @@ import React from 'react'
 import Footer from '../components/Footer'
 import MenuCard from '../components/MenuCard'
 import MenuContainer from '../components/MenuContainer'
-import WelcomeHome from '../components/WelcomeHome'
+import Hero from '../components/Hero'
 import { useState } from 'react';
 import Loader from '../components/Loader'
 
@@ -14,7 +14,7 @@ function Home() {
   }, 1000);
   return (
         <div>
-          <WelcomeHome/>
+          <Hero/>
       {isLoading ? (
         <div>
         <Loader/>

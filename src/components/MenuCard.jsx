@@ -47,14 +47,18 @@ const Menubutton=styled('button')(({theme})=>({
     backgroundColor:"#fff",
     color:"#9a7fae",
     marginTop:"20px",
-    marginLeft:"90px",
+    marginLeft:"100px",
     marginRight:"-30px",
     
     "&:hover" :{
         backgroundColor:"#9a7fae",
         color:"#fff"
 
-    }
+    },
+    [theme.breakpoints.down("sm")]:{
+      marginLeft:"29px",
+    },
+    
 }))
     const Logoalign=styled(Box)(({theme})=>({
         display:"flex",
@@ -77,7 +81,13 @@ const Menubutton=styled('button')(({theme})=>({
         marginRight:"-50px",
         marginTop: "80px",
         width: "250px",
-     }
+     },
+     [theme.breakpoints.down("sm")]:{
+      marginLeft: "70px",
+      marginRight:"-50px",
+      marginTop: "50px",
+      width: "250px",
+   }
     }))
     const FontTitle=styled(Typography)(({theme})=>({
       fontSize:"19px",
@@ -127,7 +137,7 @@ const Menubutton=styled('button')(({theme})=>({
       }
    
   return (
-   <Box sx={{backgroundImage:`url(${wallpaper})`}}>
+   <Box sx={{backgroundImage:`url(${wallpaper})`,height:{lg:"850px",sm:"900px",md:"900px",xs:"1400px"}}}>
     
     <hr style={{marginTop:"50px"}}></hr>
         <Title><span style={{textDecoration:"underline #9a7fae solid 3px"}}>Our Hot</span> <span style={{color:"#9a7fae"}}>Dishes</span></Title>
