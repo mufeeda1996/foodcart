@@ -49,9 +49,9 @@ function Cart () {
     padding: '30px',
     boxShadow: 'rgba(0, 0, 0, 0.5) 0px 5px 15px',
     [theme.breakpoints.down('md')]: {
-      width: '300px',
+      width: '260px',
       marginTop: '10px',
-      marginLeft: '14px'
+      marginLeft: '10px'
     }
   }))
 
@@ -63,9 +63,9 @@ function Cart () {
     width: '400px',
     height: '70px',
     [theme.breakpoints.down('md')]: {
-      width: '359px',
+      width: '309px',
       marginTop: '10px',
-      marginLeft: '-38px'
+      marginLeft: '-14px'
     }
   }))
   const Btn = styled('button')(({ theme }) => ({
@@ -154,7 +154,7 @@ function Cart () {
                           -
                         </Btn>
                       </Box>
-                      <Box sx={{ marginLeft: '50px', marginTop: '10px' }}>
+                      <Box sx={{ marginLeft: {lg:'50px',md:"20px"}, marginTop: '10px' }}>
                         <Typography>{items.name}</Typography>
                         <Typography> ${items.price * items.cartQuantity}</Typography>
                       </Box>
@@ -173,7 +173,7 @@ function Cart () {
             </Box>
           <Box sx={{ width:"270px",maxWidth: "500px"}}>
               <Box>
-                <span style={{fontSize:".9em",marginLeft:"100px"}}>Subtotal</span>
+                <span style={{fontSize:".9em",marginLeft:"90px"}}>Subtotal</span>
                 <Span style={{}}>${cartTotalAmount}</Span>
               </Box>
               <ButtonCheckout >Check out</ButtonCheckout>
